@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+	 background: url(bg1.jpg) no-repeat; 
+	background-size: cover;
+	height: 100vh;
+}
+nav{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+  background: rgba(0,0,0,0.3);
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  width: 90px;
+  height: 80px;
+  float: left;
+  font-size: 30px;
+}
+nav ul{
+  float: right;
+  margin-right: 50px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  /* background: rgba(0,0,0,0.3); */
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: #DC143C;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #DC143C,
+               0 0 10px #DC143C;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 5px solid #DC143C;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 10px;
+  width: 180px;
+  float: none;
+  display: list-item;
+  border-bottom: rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 40px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,input{
+  display: none;
+}
+
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+.content{
+    width:50%;
+    height: 50%;
+	position: absolute;
+	top: 230px;
+    left: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+/* //////////////////////////////////////////////////////////////////// */
+.text strong{
+    font-size: 2.5rem;
+    width:100%;
+    text-align: center;
+    color: #ffffff;
+    line-height: 50px;
+}
+.text p{
+    color: rgba(230,230,230,0.92);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 2px;
+}
+.btn{
+    width:200px;
+    height: 45px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #f84a4a;
+    margin-top: 10px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.btn:hover{
+    background-color: #d83737;
+    transition: 1s;
+}
+.text strong span{
+    color: #f76363;
+}
+.btn{
+        width:180px;
+        height: 44px;
+    }
+/*h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Signika Negative', sans-serif;
+}
+section {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+.main-home {
+	padding: 330px 0px 250px 0;
+	z-index: 1;
+	text-align: center;
+	position: relative;
+	font-size: 13px;
+	color: #fff;
+	background: #000;
+	min-height: 400px;
+}
+.home__header-content {
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+}
+.home__header-content h1{
+	font-family: 'Kameron', serif;
+}
+.home__header-content p{
+	font-weight: 300;
+	font-size: 20px;
+	margin-top: 20px;
+}
+.home__header-content a.btn-default {
+	margin-top: 15px;
+}
+--- Carousel --
+#main-home-carousel .intro-title {
+	font-family: 'Kameron', serif;
+}
+#main-home-carousel .intro-text {
+	color: #cacaca;
+	font-weight: 300;
+	margin-bottom: 30px;
+}*/

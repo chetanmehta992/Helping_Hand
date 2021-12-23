@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+   
+    <link rel="stylesheet" href="js/type.min.js">
+	<link rel="shortcut icon" href="css/HH.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+  background: rgba(0,0,0,0.3);
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  width: 90px;
+  height: 80px;
+  float: left;
+  font-size: 30px;
+}
+nav ul{
+  float: right;
+  margin-right: 50px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  /* background: rgba(0,0,0,0.3); */
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: #DC143C;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #DC143C,
+               0 0 10px #DC143C;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 5px solid #DC143C;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 10px;
+  width: 180px;
+  float: none;
+  display: list-item;
+  border-bottom: rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 40px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show{
+  display: none;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;
+ background: url(css/dash.jpg) no-repeat; 
+	background-size: cover;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top:50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+</style>
+</head>
+<body>
+ <nav>
+      <div ><img class="logo" src="css/HH.png">
+	  </div>
+      <ul>
+        <li><a href="home.jsp">Home</a></li>
+        
+        <!--<a href="#">Home</a>-->
+        <li>
+          <label for="btn-1" class="show">Features +</label>
+          <a href="#">Donor</a>
+          <ul>
+            <li><a href="DonorDetails1.jsp">Donor details</a></li>
+             <li>
+              <label for="btn-3" class="show">More +</label>
+              <a href="#">Time Period</a>
+              <ul>
+                <!--<li><a href="#">90</a></li>-->
+                <li><a href="Donoremail.jsp">90 Days</a></li>
+              
+              </ul>
+            <!--</li>-->
+
+            <!--<li><a href="#">Icons</a></li>-->
+          </ul>
+        </li>
+        <li>
+          <label for="btn-1" class="show">Features +</label>
+          <a href="#">Stock</a>
+          <ul>
+            <li><a href="Increseunit_1.jsp">Blood unit</a></li>
+            <!--<li><a href="#">Decrease unit</a></li>-->
+         
+          </ul>
+        </li>
+        <li>
+          <label for="btn-2" class="show">Services +</label>
+          <a href="#">Search</a>
+          <ul>
+            <li><a href="SearchDonor_1.jsp">By blood group</a></li>
+            <!--<li><a href="#">Blood-Donation</a></li>-->
+            <li>
+              <label for="btn-3" class="show">More +</label>
+              <!--<a href="#">More </a>-->
+<!--              <input type="checkbox" id="btn-3">
+              <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>-->
+            <!--</li>-->
+          </ul>
+        </li>
+     
+        
+        
+        <li>
+          <label for="btn-1" class="show">Features +</label>
+          <a href="About.html">About</a>
+          <ul>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Elements</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-2" class="show">Services +</label>
+          <a href="services.html">Services</a>
+          <ul>
+            <li><a href="#">Food Donation</a></li>
+            <li><a href="#">Blood-Donation</a></li>
+            <li>
+              <label for="btn-3" class="show">More +</label>
+              <a href="#">More </a>
+              <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Logout.jsp">LogOut</a></li>
+      </ul>
+    </nav>
+        <br>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><h1 style="color: white;">Contact Form</h1></center>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="lname">Email</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your Email Id..">
+
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
